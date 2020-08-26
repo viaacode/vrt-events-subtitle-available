@@ -1,3 +1,12 @@
 viaa:
     logging:
       level: DEBUG
+app:
+    rabbitmq:
+        host: !ENV ${RABBITMQ_HOST}
+        port: 5672
+        username: !ENV ${RABBITMQ_USERNAME}
+        password: !ENV ${RABBITMQ_PASSWORD}
+        subtitle_incoming_queue: !ENV ${RABBITMQ_SUBTITLE_INCOMING_QUEUE}
+        subtitle_outgoing_exchange: !ENV ${RABBITMQ_SUBTITLE_OUTGOING_EXCHANGE}
+        subtitle_outgoing_rk: !ENV ${RABBITMQ_SUBTITLE_OUTGOING_RK}
