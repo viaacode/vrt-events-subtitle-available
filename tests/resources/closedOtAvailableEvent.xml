@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns8:closedOtAvailableEvent xmlns:process="http://www.vrt.be/schema/mig/messaging/process"
+    xmlns:ns8="http://www.vrt.be/mig/viaa"
+    xmlns:ns7="http://www.vrt.be/schema/mig/messaging/viaa"
+    xmlns:viaa="http://www.vrt.be/mig/viaa/api"
+    xmlns:ns9="http://www.vrt.be/schema/mig/transfer/agentcommand"
+    xmlns:mam="http://www.vrt.be/schema/mig/messaging/mam"
+    xmlns:ebu="urn:ebu:metadata-schema:ebuCore_2012"
+    xmlns:mig="http://www.vrt.be/schema/mig/messaging"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <ns8:timestamp>2020-08-27T16:46:41.838+02:00</ns8:timestamp>
+    <ns8:metadata>
+        <ebu:title>
+            <dc:title>Closed</dc:title>
+        </ebu:title>
+        <ebu:alternativeTitle>
+            <dc:title>Closed alt</dc:title>
+        </ebu:alternativeTitle>
+        <ebu:alternativeTitle typeDefinition="season">
+            <dc:title>Closed season</dc:title>
+        </ebu:alternativeTitle>
+        <ebu:alternativeTitle typeDefinition="series">
+            <dc:title>Closed series</dc:title>
+        </ebu:alternativeTitle>
+        <ebu:alternativeTitle typeDefinition="program">
+            <dc:title>Closed program</dc:title>
+        </ebu:alternativeTitle>
+        <ebu:creator>
+            <ebu:organisationDetails>
+                <ebu:organisationName>PC</ebu:organisationName>
+            </ebu:organisationDetails>
+            <ebu:role typeDefinition="productionCompany"/>
+        </ebu:creator>
+        <ebu:creator>
+            <ebu:organisationDetails>
+                <ebu:organisationName></ebu:organisationName>
+            </ebu:organisationDetails>
+            <ebu:role typeDefinition="provenance"/>
+        </ebu:creator>
+        <ebu:subject note=""/>
+        <ebu:description typeDefinition="short">
+            <dc:description>Example of a closed OT available request.</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="long">
+            <dc:description>The long description of an example of a closed OT available request.</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="season">
+            <dc:description>1</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="comment">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="cast">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="category">
+            <dc:description>algemeen</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="categoryTrailer">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="productionMethod">
+            <dc:description>intern</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="status">
+            <dc:description>nieuw</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="cleanMediaVersion">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="hasBeenBroadcasted">
+            <dc:description>false</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="contentCheck">
+            <dc:description>false</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="historicalFormat">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="duration">
+            <dc:description>00:03:52:15</dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="rights">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:description typeDefinition="rightsType">
+            <dc:description></dc:description>
+        </ebu:description>
+        <ebu:publisher>
+            <ebu:organisationDetails>
+                <ebu:organisationName></ebu:organisationName>
+            </ebu:organisationDetails>
+            <ebu:role typeDefinition="publisher"/>
+        </ebu:publisher>
+        <ebu:contributor>
+            <ebu:contactDetails>
+                <ebu:name>Producer</ebu:name>
+            </ebu:contactDetails>
+            <ebu:role typeDefinition="producer"/>
+        </ebu:contributor>
+        <ebu:contributor>
+            <ebu:contactDetails>
+                <ebu:name>Assistant</ebu:name>
+            </ebu:contactDetails>
+            <ebu:role typeDefinition="assistant"/>
+        </ebu:contributor>
+        <ebu:date>
+            <ebu:created/>
+        </ebu:date>
+        <ebu:type>
+            <ebu:genre typeDefinition="quiz en spel"/>
+            <ebu:objectType typeDefinition="program"/>
+        </ebu:type>
+        <ebu:format formatDefinition="current">
+            <ebu:videoFormat videoFormatDefinition="hires">
+                <ebu:width>1920</ebu:width>
+                <ebu:height>1080</ebu:height>
+                <ebu:frameRate>25</ebu:frameRate>
+                <ebu:aspectRatio>
+                    <ebu:factorNumerator>16</ebu:factorNumerator>
+                    <ebu:factorDenominator>9</ebu:factorDenominator>
+                </ebu:aspectRatio>
+                <ebu:codec>
+                    <ebu:name>AVC-I</ebu:name>
+                </ebu:codec>
+                <ebu:bitRate>113664000</ebu:bitRate>
+            </ebu:videoFormat>
+            <ebu:containerFormat formatDefinition="MXF OP1a"/>
+            <ebu:start>
+                <ebu:timecode>10:00:00:00</ebu:timecode>
+            </ebu:start>
+            <ebu:end>
+                <ebu:timecode>10:03:52:15</ebu:timecode>
+            </ebu:end>
+            <ebu:technicalAttributeString typeDefinition="SOM">10:00:00:00</ebu:technicalAttributeString>
+        </ebu:format>
+        <ebu:identifier typeDefinition="MEDIA_ID">
+            <dc:identifier>media_id_closed</dc:identifier>
+            <ebu:attributor>
+                <ebu:organisationDetails>
+                    <ebu:organisationName>WON</ebu:organisationName>
+                </ebu:organisationDetails>
+            </ebu:attributor>
+        </ebu:identifier>
+        <ebu:identifier typeDefinition="historicalRecordNumber">
+            <dc:identifier></dc:identifier>
+        </ebu:identifier>
+        <ebu:identifier formatLanguage="NL" typeDefinition="otIdClosed">
+            <dc:identifier></dc:identifier>
+        </ebu:identifier>
+        <ebu:relation internalRunningOrderNumber="44" typeDefinition="season"/>
+        <ebu:relation typeDefinition="season">
+            <ebu:relationIdentifier>
+                <dc:identifier>seasonid</dc:identifier>
+            </ebu:relationIdentifier>
+        </ebu:relation>
+        <ebu:rights>
+            <ebu:rightsHolder>
+                <ebu:organisationDetails>
+                    <ebu:organisationName></ebu:organisationName>
+                </ebu:organisationDetails>
+            </ebu:rightsHolder>
+        </ebu:rights>
+    </ns8:metadata>
+</ns8:closedOtAvailableEvent>

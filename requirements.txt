@@ -1,2 +1,5 @@
 viaa-chassis==0.2.0rc1
 pika==1.1.0
+lxml==4.5.2
+pytest==6.0.1
+pytest-cov==2.10.1
