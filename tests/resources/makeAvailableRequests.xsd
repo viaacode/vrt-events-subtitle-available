@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://www.vrt.be/mig/viaa"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.vrt.be/mig/viaa">
+    <xs:element name="makeEssenceAvailableRequest">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="tns:MediaRequestType"/>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+     
+    <xs:element name="makeSubtitleAvailableRequest">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="tns:MediaRequestType">
+                    <xs:sequence>
+                        <xs:element name="otType" type="tns:otType"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+     
+    <xs:element name="makeCollateralAvailableRequest">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="tns:MediaRequestType">
+                    <xs:sequence>
+                        <xs:element name="originalFilename" type="xs:string"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="MediaRequestType">
+        <xs:sequence>
+            <xs:element name="requestor" type="xs:string"/>
+            <xs:element name="correlationId" type="xs:string"/>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="destinationPath" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="otType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OPEN" />
+            <xs:enumeration value="CLOSED" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
