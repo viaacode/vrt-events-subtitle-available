@@ -23,6 +23,10 @@ class EventListener:
 
     def handle_message(self, channel, method, properties, body):
         """Main method that will handle the incoming messages."""
+
+        # 0. Log incoming message on DEBUG level
+        self.log.debug("Incoming event", body=body)
+
         # 1. Parse incoming message
         try:
             event = SubtitleEvent(body)
