@@ -50,6 +50,11 @@ class EventListener:
             channel.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
             return
 
+        self.log.info(
+            f"makeSubtitleAvailableRequest sent",
+            request_message=request_message
+        )
+
         # 4. Send ack back to RabbitMQ
         channel.basic_ack(delivery_tag=method.delivery_tag)
 
