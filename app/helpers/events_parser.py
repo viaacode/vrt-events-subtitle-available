@@ -60,7 +60,7 @@ class SubtitleEvent():
                 f"Unknown event for root tag: '{root_tag}'."
             )
 
-    def _get_xpath_from_event(self, xpath, optional: bool = False) -> str:
+    def _get_xpath_from_event(self, xpath) -> str:
         """ Parses value based on an xpath.
 
         Raises:
@@ -69,10 +69,7 @@ class SubtitleEvent():
         try:
             return self.event.xpath(xpath, namespaces=NAMESPACES)[0].text
         except IndexError:
-            if optional:
-                return ""
-            else:
-                raise InvalidEventException(f"'{xpath}' is not present in the event.")
+            raise InvalidEventException(f"'{xpath}' is not present in the event.")
 
     def destination_path_type(self) -> str:
         """ calculates a subpath of the destination based on the caption type.
