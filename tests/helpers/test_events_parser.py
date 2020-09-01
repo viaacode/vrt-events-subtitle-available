@@ -21,7 +21,15 @@ def test_open_ot_available():
     assert event.destination_path_type() == "openOt"
 
 
-def test_unknown_event():
+@pytest.mark.parametrize(
+    "filename,fault_string",
+    [
+        ("missingMediaID.xml", "[@typeDefinition='MEDIA_ID']"),
+        ("unknownOtAvailableEvent.xml", "unknownOtAvailableEvent"),
+        ("invalidXML.xml", "Event is not valid XML."),
+    ],
+)
+def test_invalid_event(filename, fault_string):
     with pytest.raises(InvalidEventException) as error:
-        SubtitleEvent(load_resource("unknownOtAvailableEvent.xml"))
-    assert "unknownOtAvailableEvent" in error.value.message
+        SubtitleEvent(load_resource(filename))
+    assert fault_string in error.value.message

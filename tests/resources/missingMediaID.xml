@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns8:openOtAvailableEvent xmlns:process="http://www.vrt.be/schema/mig/messaging/process"
+    xmlns:ns8="http://www.vrt.be/mig/viaa"
+    xmlns:ns7="http://www.vrt.be/schema/mig/messaging/viaa"
+    xmlns:viaa="http://www.vrt.be/mig/viaa/api"
+    xmlns:ns9="http://www.vrt.be/schema/mig/transfer/agentcommand"
+    xmlns:mam="http://www.vrt.be/schema/mig/messaging/mam"
+    xmlns:ebu="urn:ebu:metadata-schema:ebuCore_2012"
+    xmlns:mig="http://www.vrt.be/schema/mig/messaging"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <ns8:timestamp>2020-08-27T15:50:03.099+02:00</ns8:timestamp>
+    <ns8:metadata>
+    </ns8:metadata>
+</ns8:openOtAvailableEvent>
