@@ -51,7 +51,7 @@ class EventListener:
             return
 
         self.log.info(
-            f"makeSubtitleAvailableRequest sent",
+            "makeSubtitleAvailableRequest sent",
             request_message=request_message
         )
 
