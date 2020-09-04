@@ -19,7 +19,7 @@ def construct_request(event: SubtitleEvent) -> str:
     etree.SubElement(root, f"{{{NAMESPACE_TNS}}}correlationId").text = str(uuid4())
     etree.SubElement(root, f"{{{NAMESPACE_TNS}}}id").text = f"{event.media_id}"
     etree.SubElement(root, f"{{{NAMESPACE_TNS}}}destinationPath").text = (
-        f"s3://mam-collaterals/{event.destination_path_type()}/{event.media_id}/"
+        f"mam-collaterals/{event.destination_path_type()}/{event.media_id}/"
     )
     etree.SubElement(root, f"{{{NAMESPACE_TNS}}}otType").text = f"{event.ot_type}"
 
