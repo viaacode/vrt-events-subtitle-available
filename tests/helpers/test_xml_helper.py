@@ -21,7 +21,7 @@ def test_construct_request_open():
     assert _xml_value(xml, "/tns:id") == "media_id_open"
     assert _xml_value(xml, "/tns:otType") == "OPEN"
     assert _xml_value(xml, "/tns:destinationPath") == (
-        "mam-collaterals/openOt/media_id_open/"
+        "mam-collaterals/openOt/media_id_open"
     )
 
     # Assert validness according to schema
@@ -37,7 +37,7 @@ def test_construct_request_closed():
     assert _xml_value(xml, "/tns:id") == "media_id_closed"
     assert _xml_value(xml, "/tns:otType") == "CLOSED"
     assert _xml_value(xml, "/tns:destinationPath") == (
-        "mam-collaterals/closedOt/media_id_closed/"
+        "mam-collaterals/closedOt/media_id_closed"
     )
 
     # Assert validness according to schema
