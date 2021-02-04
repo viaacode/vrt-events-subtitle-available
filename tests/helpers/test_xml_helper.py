@@ -5,6 +5,8 @@ from io import BytesIO
 
 from lxml import etree
 
+from uuid import UUID
+
 from app.helpers.events_parser import SubtitleEvent
 from app.helpers.xml_helper import construct_request, NSMAP
 from tests.resources.resources import construct_filename, load_resource
@@ -17,7 +19,7 @@ def test_construct_request_open():
     xml = etree.parse(BytesIO(construct_request(event)))
     # Assert correct values in the XML
     assert _xml_value(xml, "/tns:requestor") == "VIAA"
-    assert len(_xml_value(xml, "/tns:correlationId")) == 36
+    assert UUID(_xml_value(xml, "/tns:correlationId")).version == 4
     assert _xml_value(xml, "/tns:id") == "media_id_open"
     assert _xml_value(xml, "/tns:otType") == "OPEN"
     assert _xml_value(xml, "/tns:destinationPath") == (
@@ -33,7 +35,7 @@ def test_construct_request_closed():
     xml = etree.parse(BytesIO(construct_request(event)))
     # Assert correct values in the XML
     assert _xml_value(xml, "/tns:requestor") == "VIAA"
-    assert len(_xml_value(xml, "/tns:correlationId")) == 36
+    assert UUID(_xml_value(xml, "/tns:correlationId")).version == 4
     assert _xml_value(xml, "/tns:id") == "media_id_closed"
     assert _xml_value(xml, "/tns:otType") == "CLOSED"
     assert _xml_value(xml, "/tns:destinationPath") == (
