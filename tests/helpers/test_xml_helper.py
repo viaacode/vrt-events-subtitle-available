@@ -18,7 +18,7 @@ def test_construct_request_open():
     event = SubtitleEvent(load_resource("openOtAvailableEvent.xml"))
     xml = etree.parse(BytesIO(construct_request(event)))
     # Assert correct values in the XML
-    assert _xml_value(xml, "/tns:requestor") == "VIAA"
+    assert _xml_value(xml, "/tns:requestor") == "meemoo"
     assert UUID(_xml_value(xml, "/tns:correlationId")).version == 4
     assert _xml_value(xml, "/tns:id") == "media_id_open"
     assert _xml_value(xml, "/tns:otType") == "OPEN"
@@ -34,7 +34,7 @@ def test_construct_request_closed():
     event = SubtitleEvent(load_resource("closedOtAvailableEvent.xml"))
     xml = etree.parse(BytesIO(construct_request(event)))
     # Assert correct values in the XML
-    assert _xml_value(xml, "/tns:requestor") == "VIAA"
+    assert _xml_value(xml, "/tns:requestor") == "meemoo"
     assert UUID(_xml_value(xml, "/tns:correlationId")).version == 4
     assert _xml_value(xml, "/tns:id") == "media_id_closed"
     assert _xml_value(xml, "/tns:otType") == "CLOSED"

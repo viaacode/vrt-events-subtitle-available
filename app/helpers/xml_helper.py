@@ -9,7 +9,7 @@ from app.helpers.events_parser import SubtitleEvent
 
 NAMESPACE_TNS = "http://www.vrt.be/mig/viaa"
 NSMAP = {"tns": NAMESPACE_TNS}
-REQUESTOR = "VIAA"
+REQUESTOR = "meemoo"
 
 
 def construct_request(event: SubtitleEvent) -> str:
